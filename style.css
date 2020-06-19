@@ -27,6 +27,19 @@ html {
     align-items: center;
 }
 
+
+.section-heading {
+    font-size: 5rem;
+    color: var(--color1);
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    margin-bottom: 15rem;
+    border-bottom: .3rem solid var(--color1);
+    text-shadow: .2rem .2rem .5rem var(--color5);
+}
+
+
+
 /*Section 1*/
 .section-1 {
     width: 100%;
@@ -116,4 +129,267 @@ html {
 
 .navbar-link:hover::before{
     width: 130%;
+}
+
+
+/*Section 2*/
+.section-2 {
+    width: 100%;
+    height: 100%;
+    padding: 15rem 0 10rem 0;
+    background-color: var(--color2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.progress-bars-wrapper {
+    margin-bottom: 10rem;
+
+}
+
+.progress-bar {
+    width: 60rem;
+    height: 3rem;
+    background-color: var(--color5);
+    margin: 1.5rem 0;
+    border-radius: .3rem;
+    box-shadow: .2rem .2rem 1rem var(--color1);
+    position: relative;
+}
+
+.progress-text {
+    position: absolute;
+    left: 1rem;
+    font-size: 1.5rem;
+    color: var(--color2);
+}
+
+.progress-text span {
+    margin: 0 .5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.progress-percent {
+    width: 90%;
+    height: 100%;
+    background-color: var(--color4);
+    border-radius: .3rem;
+}
+
+.services {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.service {
+    text-align: center;
+
+}
+
+
+.service:first-child,
+.service:last-child {
+    align-self: flex-start;
+}
+
+.service i {
+    font-size: 10rem;
+    color: var(--color1);
+    margin-bottom: 2rem;
+    text-shadow: .1rem .5rem var(--color5);
+}
+
+.service h2 {
+    font-size: 2rem;
+    color: var(--color2);
+    background-color: var(--color1);
+    letter-spacing: .3rem;
+    transform: skew(-10deg);
+    box-shadow: .2rem .2rem .5rem var(--color5);
+}
+
+
+
+
+/* Section 3 */
+
+.section-3 {
+    width: 100%;
+    height: 100%;
+    padding: 10rem 0;
+    background-color: #777;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+.projects-wrapper {
+    width: 80%;
+    flex-wrap: wrap;
+
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    background-color: var(--color2);
+    box-shadow: .3rem .3rem .5rem var(--color1);
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow .5s;
+}
+.project:hover {
+    box-shadow: 1rem 1rem 1rem var(--color1);
+}
+
+.project-text {
+    text-align: center;
+    letter-spacing: .1rem;
+    position: absolute;
+    top: -10rem;
+    transition: top .3s;
+    z-index: 10;
+
+}
+.project:hover .project-text {
+    top: 5rem;
+    transition: top .3s .3s;
+}
+
+.project-name {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--color1);
+    text-transform: capitalize;
+}
+
+.project-technologies {
+    font-size: 1.8rem;
+    color: var(--color4);
+
+}
+.project-img {
+    width: 40rem;
+    transition: opacity .3s;
+
+}
+.project:hover .project-img {
+    opacity: .2;
+}
+
+.project-link {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--color1);
+    letter-spacing: .1rem;
+    border: .3rem solid var(--color4);
+    padding: 0 1rem;
+    background-color: var(--color2);
+    position: absolute;
+    bottom: -5rem;
+    transition: bottom .3s;
+
+}
+.project:hover .project-link {
+    bottom: 5rem;
+    transition: bottom .3s .3s;
+}
+
+
+/* Section 4 */
+
+.section-4 {
+    width: 100%;
+    height: 70vh;
+    background-color: var(--color1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.section-4-heading {
+    color: var(--color2);
+    box-shadow: none;
+    border-color: var(--color2);
+    margin-bottom: 5rem;
+}
+
+.contact-form {
+    width: 50rem;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: .5rem;
+    margin: .5rem 0;
+    background-color: var(--color2);
+    font-size: 1.5rem;
+    border: .2rem solid var(--color4);
+    color: var(--color1);
+}
+
+.contact-form textarea {
+    height: 10rem;
+    max-height: 15rem;
+    max-width: 100%;
+}
+
+.contact-form .contact-form-btn {
+    background-color: var(--color4);
+    color: var(--color2);
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    cursor: pointer;
+}
+
+
+/* Footer */
+.section-5 {
+    width: 100%;
+    height: 30vh;
+    background-color: #232323;
+    flex-direction: column;
+}
+
+.social-media {
+    margin-bottom: 5rem;
+}
+
+.social-media-link {
+    margin: 0 2rem;
+    padding: .7rem;
+    background-color: var(--color4);
+    border-radius: .5rem;
+    display: inline-block;
+}
+
+.social-media-link i {
+    font-size: 3rem;
+    color: var(--color2);
+
+}
+
+.copyright {
+    color: var(--color5);
+    font-size: 2rem;
+    letter-spacing: .2rem;
+    font-weight: 300;
+    text-align: center;
 }
