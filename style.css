@@ -1,0 +1,89 @@
+/*Reset and Common Styles*/
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+
+    --color1: #011627;
+    --color2: #fdfffc;
+    --color3: #2ec4b6;
+    --color4: #e71d36;
+    --color5: #ff9f1c;
+
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Section 1*/
+.section-1 {
+    width: 100%;
+    height: 100vh;
+    background: url(assets/img/bg.jpg) center no-repeat;
+    background-size: cover;
+
+    flex-direction: column;
+  
+}
+.section-1-heading{
+    font-size: 6rem;
+    font-weight: 700;
+    color: var(--color2);
+    background-color: var(--color4);
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    padding: 0 3rem;
+    margin-bottom: 5rem;
+    border-bottom: .3rem solid var(--color2);
+    text-shadow: .2rem .2rem .1rem var(--color1);
+    transform: skew(-10deg);
+}
+.section-1 img{
+    height: 25rem;
+    width: 25rem;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 0.7rem dotted var(--color4);
+    background-color: var(--color1);
+    padding: .5rem;
+    opacity: 0.9;
+}
+.person-name{
+    font-size: 2rem;
+    color: var(--color2);
+    background-color: var(--color4);
+    margin: 5rem 0;
+    padding: .5rem 3rem;
+    letter-spacing: .3rem;
+    transform: skew(-10deg);
+}
+
+.section-1-btn{
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--color1);
+    background-color: var(--color2);
+    border: .3rem solid var(--color1);
+    padding: .5rem 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+}
+
+/*Navbar*/
+.navbar {
+    width: 100%;
+    height: 4rem;
+    background-color: var(--color4);
+}
