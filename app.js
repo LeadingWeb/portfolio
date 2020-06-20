@@ -7,10 +7,11 @@ const $progress = document.querySelector('.progress-bars-wrapper');
 
 const progressBarPerc = [97, 89, 85, 87, 87, 87, 87];
 
+
 window.addEventListener('scroll', (e) => {
     mainFn();
-
-
+    
+    
 })
 
 const mainFn = () => {
@@ -19,7 +20,7 @@ const mainFn = () => {
     }else {
         $navbar.classList.remove('sticky');
     }
-
+    
     $sections.forEach((section, index) => {
         if(window.pageYOffset >= section.offsetTop - 10) {
             $navbarLinks.forEach(link => {
@@ -28,7 +29,7 @@ const mainFn = () => {
             $navbarLinks[index].classList.add('change');
         }
     })
-
+    
     if(window.pageYOffset + window.innerHeight >= $progress.offsetTop) {
         document.querySelectorAll('.progress-percent').forEach((el, index) => {
             el.style.width = `${progressBarPerc[index]}%`;
@@ -42,3 +43,44 @@ mainFn();
 window.addEventListener('resize', (e) => {
     window.location.reload();
 })
+
+
+//Animation
+
+const scroll = window.requestAnimationFrame || function(callback) {
+    window.setTimeout(callback, 1000/60);
+};
+
+let elementsToShow = document.querySelectorAll('.show-on-scroll');
+
+
+function loop() {
+    elementsToShow.forEach(el => {
+        if(isElementInViewport(el)) {
+            el.classList.add('is-visible');
+        }else {
+            el.classList.remove('is-visible');
+        }
+    });
+    scroll(loop);
+}
+
+loop();
+
+function isElementInViewport(el) {
+  // special bonus for those using jQuery
+  if (typeof jQuery === "function" && el instanceof jQuery) {
+    el = el[0];
+  }
+  var rect = el.getBoundingClientRect();
+  return (
+    (rect.top <= 0
+      && rect.bottom >= 0)
+    ||
+    (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.top <= (window.innerHeight || document.documentElement.clientHeight))
+    ||
+    (rect.top >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
+  );
+}
