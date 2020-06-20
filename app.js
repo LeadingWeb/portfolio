@@ -54,7 +54,7 @@ const scroll = window.requestAnimationFrame || function(callback) {
 let elementsToShow = document.querySelectorAll('.show-on-scroll');
 
 
-function loop() {
+function loopHere() {
     elementsToShow.forEach(el => {
         if(isElementInViewport(el)) {
             el.classList.add('is-visible');
@@ -62,10 +62,10 @@ function loop() {
             el.classList.remove('is-visible');
         }
     });
-    scroll(loop);
+    scroll(loopHere);
 }
 
-loop();
+loopHere();
 
 function isElementInViewport(el) {
   // special bonus for those using jQuery

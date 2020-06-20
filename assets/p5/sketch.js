@@ -1,24 +1,34 @@
 let n = 0;
-let c = 3;
+let c = 4;
 let scaleFactor = 0.001;
 let scalePlusEl = 0.005;
 let x, y;
 let ellD = 4;
 const baseAngle = 137;
 let $main, $canvas;
+let bg = '#011627';
+let col = ['#fdfffc', '#2ec4b6', '#e71d36', '#ff9f1c']
+
+
 
 function setup() {
-    $main = document.querySelector('.main');
+
+    $main = document.getElementById('section-1');
     // console.log($main)
     let wi = $main.offsetWidth;
     let hi = $main.offsetHeight;
+    // $main.style.position = 'relative';
+
     $canvas = createCanvas(wi, hi);
-    $canvas.parent('main');
-    
+    $canvas.parent('section-1');
+    $canvas.position(0, 0);
+    $canvas.style('z-index', '-1');
+
+
     // $main.appendChild($canvas);
     angleMode(DEGREES);
-    colorMode(HSB);
-    background(23);
+    // colorMode(HSB);
+    background(bg);
     
 }
 
@@ -35,7 +45,9 @@ function draw() {
         x = r * cos(a) + width / 2;
         y = r * sin(a) + height / 2;
         
-        fill(r % 256, 50, (a % 256) * 0.6);
+        let index = floor(a % 4);
+        // console.log(index);
+        fill(col[index]);
         ellipse(x, y, ellD, ellD);
         ellD += scaleFactor + scalePlusEl;
         c += scaleFactor;
@@ -53,6 +65,7 @@ function mouseWheel(event) {
     } else {
         if (scaleFactor > 0.001)
         scaleFactor -= 0.001;
+        scalePlusEl -= 0.01
         // console.log(ellD)
         
     }
@@ -68,5 +81,5 @@ function windowResized() {
     resizeCanvas(wi, hi);
     x = 0;
     y = 0;
-    background(23);
+    background(bg);
 }
