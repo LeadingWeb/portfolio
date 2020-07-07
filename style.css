@@ -324,7 +324,7 @@ html {
     text-align: center;
     letter-spacing: .1rem;
     position: absolute;
-    top: -10rem;
+    top: -20rem;
     transition: top .3s;
     z-index: 10;
 
