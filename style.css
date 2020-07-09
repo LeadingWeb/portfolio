@@ -355,6 +355,18 @@ html {
     opacity: .2;
 }
 
+.project-links {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+    position: absolute;
+    bottom: -20rem;
+    transition: bottom .3s;
+}
+
 .project-link {
     font-size: 2rem;
     font-weight: 500;
@@ -363,12 +375,9 @@ html {
     border: .3rem solid var(--color4);
     padding: 0 1rem;
     background-color: var(--color2);
-    position: absolute;
-    bottom: -5rem;
-    transition: bottom .3s;
 
 }
-.project:hover .project-link {
+.project:hover .project-links {
     bottom: 5rem;
     transition: bottom .3s .3s;
 }
