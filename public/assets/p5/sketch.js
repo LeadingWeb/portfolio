@@ -1,5 +1,5 @@
 let n = 0;
-let c = 4;
+let c = 6;
 let scaleFactor = 0.001;
 let scalePlusEl = 0.005;
 let x, y;
@@ -7,7 +7,12 @@ let ellD = 4;
 const baseAngle = 137;
 let $main, $canvas;
 let bg = '#011627';
-let col = ['#fdfffc', '#2ec4b6', '#e71d36', '#ff9f1c']
+let col = ['#fdfffc', '#2ec4b6', '#e71d36', '#ff9f1c'];
+
+const $img = document.querySelector('.section-1 img');
+let opac = 0;
+$img.style.opacity = opac;
+
 
 
 
@@ -39,7 +44,7 @@ function draw() {
     
     
     if(x >= 0 && x < width && y >= 0 && y < height || x == undefined && y == undefined) {
-        let a = n * val;
+        let a = n * val + 100;
         let r = c * sqrt(n);
         
         x = r * cos(a) + width / 2;
@@ -54,7 +59,10 @@ function draw() {
         n++;
         
     }
-    
+    if (opac < 1) {
+        opac += 0.001;
+        $img.style.opacity = opac;
+    }
 }
 
 function mouseWheel(event) {

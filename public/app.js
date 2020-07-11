@@ -4,8 +4,9 @@ const navbarOffset = $navbar.offsetTop;
 const $sections = document.querySelectorAll('section');
 const $navbarLinks = document.querySelectorAll('.navbar-link');
 const $progress = document.querySelector('.progress-bars-wrapper');
+const $sbtBtn = document.getElementById('contact-form-btn');
 
-const progressBarPerc = [97, 89, 85, 87, 87, 87, 87];
+const progressBarPerc = [85, 85, 89, 87, 60, 60, 50];
 
 
 window.addEventListener('scroll', (e) => {
@@ -84,3 +85,4 @@ function isElementInViewport(el) {
       rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
   );
 }
+
